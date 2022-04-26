@@ -36,3 +36,21 @@ p {
 nav {
   font-size: 2rem;
 }
+
+/*temporary thought of how to have a permanent top-bottom margin*/
+.top-margin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background-color: white;
+}
+.bottom-margin {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background-color: white;
+}

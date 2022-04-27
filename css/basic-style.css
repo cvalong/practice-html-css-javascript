@@ -1,0 +1,42 @@
+:root {
+  /* CSS HEX */
+  --light-cornflower-blue: #8ecae6ff;
+  --blue-green: #219ebcff;
+  --prussian-blue: #023047ff;
+  --selective-yellow: #ffb703ff;
+  --tangerine: #fb8500ff;
+}
+body {
+  background-color: var(--light-cornflower-blue);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+header {
+  background-color: var(--prussian-blue);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+section {
+  float: left;
+  width: 70%;
+  margin-bottom: 100px;
+}
+aside {
+  float: right;
+  width: 25%;
+}
+footer {
+  background-color: var(--selective-yellow);
+  clear: both;
+  padding: 50px 0;
+  text-align: center;
+}

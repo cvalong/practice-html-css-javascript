@@ -1,0 +1,57 @@
+:root {
+    --text-color: hsl(215, 51%, 70%);
+    --active-color: hsl(178, 100%, 50%);
+    --accent-color: hsl(0, 0%, 100%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    background: var(--main-bg);
+    font-family: sans-serif;
+    color: var(--text-color);
+}
+img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    max-width: 35ch;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+.card-info {
+    position: relative;
+}
+
+.card-info::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -0.5rem;
+    width: 100%;
+    background: var(--line);
+}

@@ -7,6 +7,8 @@
     --line: hsl(215, 32%, 27%);
 }
 
+/* global styles */
+
 *,
 *::before,
 *::after {
@@ -19,15 +21,28 @@ html {
     padding: 0;
 }
 
+/* typography */
+
+body {
+    font-family: sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+a {
+    color: var(--accent-color);
+}
+
+/* layout */
+
 body {
     display: grid;
     min-height: 100vh;
     place-items: center;
-    line-height: 1.6;
     background: var(--main-bg);
-    font-family: sans-serif;
-    color: var(--text-color);
 }
+
 img {
     border-radius: 15px;
     width: 100%;

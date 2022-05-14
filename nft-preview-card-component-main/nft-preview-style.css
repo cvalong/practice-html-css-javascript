@@ -46,7 +46,7 @@ a:hover {
     color: var(--active-color);
 }
 
-.card-image:hover {
+.card-image:hover {/*unsure how to apply the svg hover state for the image*/
     background-color: var(--active-color);
 }
 

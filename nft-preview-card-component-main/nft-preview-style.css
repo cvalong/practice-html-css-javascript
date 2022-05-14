@@ -24,14 +24,39 @@ html {
 /* typography */
 
 body {
-    font-family: sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.5;
+    font-weight: 300;
 }
 
-h1,
+a:link,
+a:visited,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
 a {
     color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--active-color);
+}
+
+.card-image:hover {
+    background-color: var(--active-color);
+}
+
+.currency {
+    color: var(--active-color);
+    
+}
+
+.nft-info {
+    font-size: 1rem;
 }
 
 /* layout */

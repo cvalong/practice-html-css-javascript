@@ -81,10 +81,7 @@ body {
     max-width: 35ch;
 }
 
-/*unsure how to apply the svg hover state for the image*/
-.card-image {
-    background-image: url("./images/image-equilibrium.jpg");
-    background-size: cover;
+.cover-image {
     border-radius: 15px;
     width: 100%;
     height: auto;
@@ -106,6 +103,7 @@ body {
     background: var(--line);
 }
 
+/*layout for currency and time container*/
 .number-box {
     justify-content: space-between;
 }
@@ -116,16 +114,30 @@ body {
 }
 
 .icon {
-    flex-basis: 3%;
+    width: 2rem;
     padding: 0.25rem;  
 }
 
+/*layout for attribution area*/
+.attribution {
+    gap: 0.5rem;
+}
 .avatar {
-    width: 3rem;
-    padding: 0.125rem;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-    margin-right: 0.75rem;
+    width: 2rem;
+    padding: 0.1rem;
     background-color: var(--accent-color);
     border-radius: 50px;
+}
+
+/*hover state for card image*/
+.card-image:hover {
+    position: relative;
+}
+.card-image:hover::after {
+    content: url("./images/icon-view.svg");
+    display: block;
+    position: absolute;
+    left: auto;
+    top: auto;
+    background-color: var(--active-color);
 }

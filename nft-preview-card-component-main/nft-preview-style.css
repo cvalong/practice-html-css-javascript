@@ -1,6 +1,7 @@
 :root {
     --text-color: hsl(215, 51%, 70%);
     --active-color: hsl(178, 100%, 50%);
+    --active-color-alpha: hsl(178, 100%, 50%, 0.6);
     --accent-color: hsl(0, 0%, 100%);
     --main-bg: hsl(217, 54%, 11%);
     --card-bg: hsl(216, 50%, 16%);
@@ -64,11 +65,6 @@ body {
     background: var(--main-bg);
 }
 
-.icon-view {
-    width: 100%;
-    height: auto;
-}
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -79,12 +75,6 @@ body {
     background: var(--card-bg);
     border-radius: 15px;
     max-width: 35ch;
-}
-
-.cover-image {
-    border-radius: 15px;
-    width: 100%;
-    height: auto;
 }
 
 .card-content {
@@ -114,7 +104,7 @@ body {
 }
 
 .icon {
-    width: 2rem;
+    width: 1.5rem;
     padding: 0.25rem;  
 }
 
@@ -129,15 +119,40 @@ body {
     border-radius: 50px;
 }
 
+/*cover image set up for hover states*/
+.cover-image {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
 /*hover state for card image*/
+/*so the below hover elements are relative to the parent*/
 .card-image:hover {
     position: relative;
+    
 }
-.card-image:hover::after {
-    content: url("./images/icon-view.svg");
-    display: block;
+/*so that the two elements can be positioned outside normal document flow to layer them*/
+.card-image::after,
+.card-image::before {
     position: absolute;
-    left: auto;
-    top: auto;
-    background-color: var(--active-color);
+}
+/*after psuedo to create semi-transparent background on hover*/
+.card-image:hover:after {
+    content: "";
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--active-color-alpha);
+    border-radius: 15px;
+}
+/*before psuedo to position svg*/
+.card-image:hover:before {
+    content: url("./images/icon-view.svg");
+    z-index: 1;
+    bottom: 9.875rem;
+    left: 9.875rem;
 }

@@ -94,6 +94,7 @@ body {
 }
 
 /*layout for currency and time container*/
+
 .number-box {
     justify-content: space-between;
 }
@@ -109,6 +110,7 @@ body {
 }
 
 /*layout for attribution area*/
+
 .attribution {
     gap: 0.5rem;
 }
@@ -120,6 +122,7 @@ body {
 }
 
 /*cover image set up for hover states*/
+
 .cover-image {
     border-radius: 15px;
     width: 100%;
@@ -128,17 +131,23 @@ body {
 }
 
 /*hover state for card image*/
+
 /*so the below hover elements are relative to the parent*/
+
 .card-image:hover {
     position: relative;
     
 }
+
 /*so that the two elements can be positioned outside normal document flow to layer them*/
+
 .card-image::after,
 .card-image::before {
     position: absolute;
 }
+
 /*after psuedo to create semi-transparent background on hover*/
+
 .card-image:hover:after {
     content: "";
     display: block;
@@ -149,10 +158,13 @@ body {
     background-color: var(--active-color-alpha);
     border-radius: 15px;
 }
+
 /*before psuedo to position svg*/
+
 .card-image:hover:before {
     content: url("./images/icon-view.svg");
     z-index: 1;
-    bottom: 9.875rem;
-    left: 9.875rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

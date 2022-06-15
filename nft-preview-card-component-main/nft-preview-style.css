@@ -149,8 +149,8 @@ body {
 
 /*after psuedo to create semi-transparent background on hover*/
 
-.card-image:hover:after {
-    content: "";
+.card-image:hover::after {
+    content: url("../index.html");
     display: block;
     top: 0px;
     left: 0px;
@@ -162,7 +162,7 @@ body {
 
 /*before psuedo to position svg*/
 
-.card-image:hover:before {
+.card-image:hover::before {
     content: url("./images/icon-view.svg");
     z-index: 1;
     left: 50%;
